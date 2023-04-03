@@ -1,0 +1,23 @@
+project:
+  components:
+    - component: CMSIS:CORE
+    - component: ARM::CMSIS:RTOS2:Keil RTX5&Source
+    - component: CMSIS Driver:USART
+    - component: ARM::Device:Startup&Baremetal
+    - component: ARM::Native Driver:IO
+    - component: ARM::Native Driver:UART
+    - component: Device:Definition
+    - component: Device:Startup&Baremetal
+  groups:
+    - files:
+        - file: ./README.md
+      group: Documentation
+    - files:
+        - file: ./main.c
+      group: Main
+    - files:
+        - file: ./hello.c
+      group: App
+    - files:
+        - file: ./Board_IO/retarget_stdio.c
+      group: Board IO
